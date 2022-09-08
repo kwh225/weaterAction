@@ -4,7 +4,7 @@
 import requests, json
 import os
 
-SCKEY=os.environ.get('SCKEY') ##Server酱推送KEY
+SCKEY=os.environ.get('SCT170059T9sFL6uW2N3lKHwTW8sQti50f') ##Server酱推送KEY
 SKey=os.environ.get('SKEY') #CoolPush酷推KEY
 def get_iciba_everyday():
     icbapi = 'http://open.iciba.com/dsapi/'
@@ -16,7 +16,7 @@ def get_iciba_everyday():
     return str
 
 def ServerPush(info): #Server酱推送
-    api = "https://sc.ftqq.com/{}.send".format(SCKEY)
+    api = "https://sc.ftqq.com/{}.send".format(SCT170059T9sFL6uW2N3lKHwTW8sQti50f)
     title = u"天气推送"
     content = info.replace('\n','\n\n')
     data = {
@@ -35,7 +35,7 @@ def CoolPush(info): #CoolPush酷推
 def main():
     try:
         api = 'http://t.weather.itboy.net/api/weather/city/'             #API地址，必须配合城市代码使用
-        city_code = '101240110'   #进入https://where.heweather.com/index.html查询你的城市代码
+        city_code = '101130809'   #进入https://where.heweather.com/index.html查询你的城市代码
         tqurl = api + city_code
         response = requests.get(tqurl)
         d = response.json()         #将数据以json形式返回，这个d就是返回的json数据
